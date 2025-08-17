@@ -2,13 +2,13 @@
 
 > **Step into a world where you can have conversations with history's greatest technology innovators**
 
-AgentTown is a revolutionary multi-agent AI simulation that brings the minds of legendary innovators into an interactive 3D environment. Walk through a virtual city, discover AI-powered NPCs, and engage in meaningful conversations with digital representations of visionaries like Elon Musk, Steve Jobs, Tim Berners-Lee, and other tech pioneers.
+AgentTown is a multi-agent AI simulation that brings the minds of legendary innovators into an interactive 3D environment. Walk through a virtual city, discover AI-powered NPCs, and engage in meaningful conversations with digital representations of visionaries like Elon Musk, Steve Jobs, Tim Berners-Lee, and other tech pioneers.
 
-## 🎬 Experience the Magic
+## 🎬 AgentTown Demo
 
 <p align="center">
   <a href="https://youtu.be/D9e7rTNWWRc" target="_blank">
-    <img src="https://img.youtube.com/vi/D9e7rTNWWRc/maxresdefault.jpg" alt="Watch AgentTown Demo" width="800">
+    <img src="https://github.com/March-08/AgentTown/blob/main/video.gif" alt="Watch AgentTown Demo" width="800">
   </a>
 </p>
 
@@ -127,10 +127,6 @@ This project was heavily inspired by and builds upon the excellent work from:
 
 - **[PhiloAgents Course](https://github.com/neural-maze/philoagents-course)** by The Neural Maze and Decoding ML: The foundational architecture, agent design patterns, and RAG implementation approach were adapted from this comprehensive open-source course on building AI-powered agent simulation engines. Special thanks to **Paul Iusztin** and **Miguel Otero Pedrido** for their exceptional educational content.
 
-- **LangChain Team**: For the incredible framework that powers our conversational AI
-- **OpenAI & Groq**: For providing the foundational language models  
-- **MongoDB, Opik, and Qdrant**: For the robust infrastructure technologies
-- **The Innovators**: For inspiring me with their vision and contributions to technology
 
 > **Note**: While this project transforms the original philosopher agents into tech innovator personalities and adds a 3D interactive environment, the core architectural patterns and implementation strategies were learned from the PhiloAgents Course. I highly recommend checking out their [comprehensive tutorial series](https://decodingml.substack.com/p/from-0-to-pro-ai-agents-roadmap) for anyone interested in building production-ready AI agent systems.
 
