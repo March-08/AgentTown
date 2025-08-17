@@ -1,0 +1,42 @@
+services:
+  db-mongo:
+    image: mongo:8.0
+    container_name: local_mongo
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: adaptiveagents
+      MONGO_INITDB_ROOT_PASSWORD: adaptiveagents
+    volumes:
+      - mongo_data:/data/db
+
+  # use local qdrant docker image when qdrant api key is not set
+  qdrant:
+    image: qdrant/qdrant:latest
+    container_name: local_qdrant
+    ports:
+      - "6333:6333"
+      - "6334:6334"
+    volumes:
+      - qdrant_data:/qdrant/storage
+    # run fastapi api with uvicorn directly from compose
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: local_api
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db-mongo
+      - qdrant
+    env_file:
+      - .env
+    environment:
+      # Override database URLs for container networking
+      - MONGO_URI=mongodb://adaptiveagents:adaptiveagents@db-mongo:27017/?authSource=admin
+    restart: unless-stopped
+
+volumes:
+  mongo_data:
+  qdrant_data:
